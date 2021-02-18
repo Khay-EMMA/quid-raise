@@ -74,17 +74,17 @@ interface IProjectStorage is IProjectSchema {
         
     function CreateSpendingRequestMapping (string calldata description, uint256 amount, address payable spendingRequestRecipient, address projectAddress) external returns (uint);
     
-    function UpdateSpendingRequest (uint _spendingRequestId, uint _numberOfVoters, bool isCompleted, address projectAddress) external;
+//     function UpdateSpendingRequest (uint _spendingRequestId, uint _numberOfVoters, bool isCompleted, address projectAddress) external;
     
-   function GetRequestById(uint _spendingRequestId) external view returns (   uint256 spendingRequestId,
-        string memory description,
-        uint256 value,
-        bool exist,
-        address payable recipient,
-        bool isCompleted,
-        uint256 numberOfVoters);
+//    function GetRequestById(uint _spendingRequestId) external view returns (   uint256 spendingRequestId,
+//         string memory description,
+//         uint256 value,
+//         bool exist,
+//         address payable recipient,
+//         bool isCompleted,
+//         uint256 numberOfVoters);
     
-    function GetRequestId() external view returns (uint);
+//     function GetRequestId() external view returns (uint);
     
     
     

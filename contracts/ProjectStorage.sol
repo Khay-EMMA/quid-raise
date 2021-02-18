@@ -15,11 +15,11 @@ contract ProjectStorage is IProjectSchema, StorageOwners {
     //list of Project contributors
     ContributorRecord[] private Contributors;
     
-    uint SpendingRequestId;
+    //uint SpendingRequestId;
     
     uint ContributorsId;
     
-    mapping(uint => SpendingRequest) SpendingRequestMapping;
+    //mapping(uint => SpendingRequest) SpendingRequestMapping;
 
     mapping(uint => ContributorRecord) private ContibutorsRecordMapping; //mapping contributors address to contributor record
 
@@ -36,78 +36,78 @@ contract ProjectStorage is IProjectSchema, StorageOwners {
     
 
     
-    function CreateSpendingRequestMapping (string calldata description, uint256 amount, address payable spendingRequestRecipient, address projectAddress) onlyStorageOracle  external returns (uint) {
+    // function CreateSpendingRequestMapping (string calldata description, uint256 amount, address payable spendingRequestRecipient, address projectAddress) onlyStorageOracle  external returns (uint) {
         
-        SpendingRequestId = SpendingRequestId.add(1);
+    //     SpendingRequestId = SpendingRequestId.add(1);
         
-        SpendingRequest storage spendingRequest = SpendingRequestMapping[SpendingRequestId];
+    //     SpendingRequest storage spendingRequest = SpendingRequestMapping[SpendingRequestId];
         
-        spendingRequest.recipient = spendingRequestRecipient;
+    //     spendingRequest.recipient = spendingRequestRecipient;
         
-        spendingRequest.exist = true;
+    //     spendingRequest.exist = true;
         
-        spendingRequest.isCompleted = false;
+    //     spendingRequest.isCompleted = false;
         
-        spendingRequest.numberOfVoters = 0;
+    //     spendingRequest.numberOfVoters = 0;
         
-        spendingRequest.spendingRequestId = SpendingRequestId;
+    //     spendingRequest.spendingRequestId = SpendingRequestId;
         
-        spendingRequest.description = description;
+    //     spendingRequest.description = description;
         
-        spendingRequest.value = amount;
+    //     spendingRequest.value = amount;
         
-        ProjectRecord storage projects = projectRecordMapping[projectAddress];
+    //     ProjectRecord storage projects = projectRecordMapping[projectAddress];
         
-        projects.request.push(spendingRequest);
+    //     projects.request.push(spendingRequest);
         
          
         
-        return SpendingRequestId;
+    //     return SpendingRequestId;
         
-    }
+    // }
     
-    function UpdateSpendingRequest (uint _spendingRequestId, uint _numberOfVoters, bool isCompleted, address projectAddress) onlyStorageOracle external {
-        SpendingRequest storage spendingRequest = SpendingRequestMapping[_spendingRequestId];
+    // function UpdateSpendingRequest (uint _spendingRequestId, uint _numberOfVoters, bool isCompleted, address projectAddress) onlyStorageOracle external {
+    //     SpendingRequest storage spendingRequest = SpendingRequestMapping[_spendingRequestId];
         
-        spendingRequest.spendingRequestId = _spendingRequestId;
+    //     spendingRequest.spendingRequestId = _spendingRequestId;
         
-        spendingRequest.numberOfVoters = _numberOfVoters;
+    //     spendingRequest.numberOfVoters = _numberOfVoters;
         
-        spendingRequest.isCompleted = isCompleted;
+    //     spendingRequest.isCompleted = isCompleted;
         
-         ProjectRecord storage projects = projectRecordMapping[projectAddress];
+    //      ProjectRecord storage projects = projectRecordMapping[projectAddress];
         
-        projects.request.push(spendingRequest);
+    //     projects.request.push(spendingRequest);
         
         
-    }
+    // }
     
     
-    function GetRequestById(uint _spendingRequestId) external view returns (   uint256 spendingRequestId,
-        string memory description,
-        uint256 value,
-        bool exist,
-        address payable recipient,
-        bool isCompleted,
-        uint256 numberOfVoters) {
-        SpendingRequest memory requests = SpendingRequestMapping[_spendingRequestId];
+    // function GetRequestById(uint _spendingRequestId) external view returns (   uint256 spendingRequestId,
+    //     string memory description,
+    //     uint256 value,
+    //     bool exist,
+    //     address payable recipient,
+    //     bool isCompleted,
+    //     uint256 numberOfVoters) {
+    //     SpendingRequest memory requests = SpendingRequestMapping[_spendingRequestId];
         
-        return (requests.spendingRequestId, requests.description, requests.value, requests.exist, requests.recipient, requests.isCompleted, requests.numberOfVoters);
-    }
-      function _GetRequestById(uint _spendingRequestId) internal view returns (SpendingRequest memory) {
-        SpendingRequest memory requests = SpendingRequestMapping[_spendingRequestId];
+    //     return (requests.spendingRequestId, requests.description, requests.value, requests.exist, requests.recipient, requests.isCompleted, requests.numberOfVoters);
+    // }
+    //   function _GetRequestById(uint _spendingRequestId) internal view returns (SpendingRequest memory) {
+    //     SpendingRequest memory requests = SpendingRequestMapping[_spendingRequestId];
         
-        return requests;
-    }
+    //     return requests;
+    // }
     
-    function GetRequestId() external view returns (uint) {
+    // function GetRequestId() external view returns (uint) {
         
-        return SpendingRequestId;
-    }
+    //     return SpendingRequestId;
+    // }
     
-    function _GetRequestId() internal view returns (uint) {
-        return SpendingRequestId;
-    }
+    // function _GetRequestId() internal view returns (uint) {
+    //     return SpendingRequestId;
+    // }
     
     
 
@@ -377,7 +377,7 @@ contract ProjectStorage is IProjectSchema, StorageOwners {
       
         ProjectRecord memory projects = projectRecordMapping[ProjectRecordId];
 
-        return ( projects.projectId, projects.projectCreator, projects.projectTitle, projects.projectDescription, projects.deadlineInSeconds, projects.durationInSeconds, projects. projectUrl,
+        return ( projects.projectId, projects.projectCreator, projects.projectTitle, projects.projectDescription, projects.deadlineInSeconds, projects.durationInSeconds, projects.projectUrl,
         projects.totalAmountContributed, projects.numberOfContributors, projects.goal, projects.contributors);
     }
 

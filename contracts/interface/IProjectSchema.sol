@@ -13,7 +13,6 @@ interface IProjectSchema {
         uint256 numberOfContributors;
         uint256 goal;
         ContributorRecord[] contributors;
-        SpendingRequest[] spendingRequest
     }
 
     struct ContributorRecord {

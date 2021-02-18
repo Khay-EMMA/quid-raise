@@ -11,7 +11,7 @@ contract FundRaisingContainers is IProjectSchema {
 
     using SafeMath for uint256;
 
-    IERC20 busdToken = IERC20(0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee);
+    IERC20 busdToken = IERC20(0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee);
 
     IProjectStorage projectStorage;
 
@@ -55,22 +55,22 @@ contract FundRaisingContainers is IProjectSchema {
         returns (ProjectRecord memory)
     {
         (
-            address projectId,
-            address payable projectCreator,
-            string memory projectTitle,
-            string memory projectDescription,
-            uint256 deadlineInSeconds,
-            uint256 durationInSeconds,
-            string memory projectUrl,
-            uint256 totalAmountContributed,
-            uint256 numberOfContributors,
-            uint256 goal,
-            ContributorRecord[] memory contributors
+        address projectId,
+        address payable projectCreator,
+        string memory projectTitle,
+        string memory projectDescription,
+        uint256 deadlineInSeconds,
+        uint256 durationInSeconds,
+        string memory projectUrl,
+        uint256 totalAmountContributed,
+        uint256 numberOfContributors,
+        uint256 goal,
+        ContributorRecord[] memory contributors
         ) = projectStorage.getProjectsRecordById(ProjectId);
 
         return
             ProjectRecord(
-                projectId,
+                ProjectId,
                 projectCreator,
                 projectTitle,
                 projectDescription,
