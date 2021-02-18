@@ -2,6 +2,9 @@
 
 Njoku Emmanuel
 
+Owanate Amachree
+
+
 # Smart Contract Flow🥑🍕
 
 - User(Admin) will start a Campaign or a Project for fundraising with a Specific Goal and Deadline💖
@@ -20,7 +23,7 @@ Njoku Emmanuel
 
 ```bash
 # Clone Repo
-$ git clone `https://github.com/Khay-EMMA/dencrowd.git`
+$ git clone `https://github.com/Khay-EMMA/quid-raise.git`
 
 # Install Dependencies
 $ yarn install

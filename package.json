@@ -1,0 +1,26 @@
+{
+  "name": "quid-raise-contract",
+  "version": "1.0.0",
+  "description": "quid contract",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuidRaise/Quid-Raise-Contract.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuidRaise/Quid-Raise-Contract/issues"
+  },
+  "homepage": "https://github.com/QuidRaise/Quid-Raise-Contract#readme",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.2.1",
+    "dotenv": "^8.2.0"
+  }
+}
