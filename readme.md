@@ -1,11 +1,19 @@
-# Author 💖
+# QuidRaise
 
-Njoku Emmanuel
+QuidRaise is a transparent and decentralized crowdfunding protocol using the Binance Smart Chain
 
-Owanate Amachree
+## Team Members
+
+1. Njoku Emmanuel
+    - kalunjoku123@gmail.com
+    - Github Profile: https://github.com/Khay-EMMA 
+
+2. Owanate Amachree 
+    - amachreeowanate@gmail.com
+    - Github Profile: https://github.com/owans
 
 
-# Smart Contract Flow🥑🍕
+## Smart Contract Flow🥑🍕
 
 - User(Admin) will start a Campaign or a Project for fundraising with a Specific Goal and Deadline💖
 
@@ -17,9 +25,9 @@ Owanate Amachree
 
 - If more than 50% of the total contributors vote for that request then the User(admin) will get permission to use the amount mentioned in the Spending Request🎉🔥
 
-- The contributors can withdraw their BUSD if the required amount(Goal) was not raised within the Deadline💔
+- The contributors can withdraw their BUSD if the required amount(Goal) was not raised within the Deadline
 
-# Running Smart Contract with Truffle and ganache blockchain locally
+## Running Smart Contract with Truffle and ganache blockchain locally
 
 ```bash
 # Clone Repo
